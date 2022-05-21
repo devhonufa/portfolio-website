@@ -782,7 +782,7 @@ h1, h2, h3, h4, h5, h6 {
   .header .navbar .menu {
     opacity: 0;
     width: 132%;
-    margin: 40px 0;
+    margin: 27px 0;
   }
   .header .navbar .menu ul {
     -webkit-box-orient: vertical;
