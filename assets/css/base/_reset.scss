@@ -1,0 +1,171 @@
+@import'variable';
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,400;1,700&family=Open+Sans:wght@400;600;700;800&family=Poppins:wght@700&display=swap');
+
+//  font-family: 'Lobster Two', cursive;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Poppins', sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+// mx auto margin
+
+.mx-auto{
+    margin: 0 auto;
+}
+
+
+// btn css code
+
+@mixin btn-primary{
+    display: inline-block;
+            padding: 7px 20px;
+            border: 2px solid $btn_border;
+            border-radius: 25px;
+            margin: 10px 15px;
+            color: $btn_color;
+            font-weight: 600;
+            background: transparent;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            &:hover span{
+                width: 100%;
+            }
+            &:hover{
+                border: none;
+            }
+            span{
+                background: $btn_background;
+                width: 0;
+                height: 100%;
+                border-radius: 25px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+                transition: 0.5s;
+            }
+    
+}
+// logo coding
+.logo{
+    display: inline-block;
+    border: 2px solid $border_color;
+    padding: 5px 15px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 0 65px 0 65px;
+    cursor: pointer;
+    a{
+          color: $border_color;
+      }
+}
+// btn css code
+
+@mixin btn-border {
+    display: inline-block;
+            padding: 7px 25px;
+            border: none;
+            border-radius: 25px;
+            margin: 10px 0;
+            color: $btn_color;
+            font-weight: 600;
+            background: transparent;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            &:hover span{
+                width: 0;
+            }
+            &:hover{
+                border: 2px solid $btn_border;
+            }
+            span{
+                background: $btn_background;
+                width: 100%;
+                height: 100%;
+                border-radius: 25px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+                transition: 0.5s;
+            }
+    
+}
+
+// padding and margin
+@for $i from 1 to 11 {
+    .pt-#{$i}{
+        padding-top: 10px * $i;
+    }
+    .pb-#{$i}{
+        padding-bottom: 10px * $i;
+    }
+    .mt-#{$i}{
+        margin-top: 10px * $i;
+    }
+    .mb-#{$i}{
+        margin-bottom: 10px * $i;
+    }
+    
+}
+
+// display text align coding
+
+$align: left, right, center, justify;
+
+@each $i in $align {
+    .text-#{$i}{
+        text-align: $i;
+    }
+    
+}
+
+// display flex coding
+
+$flex: flex, inline-flex;
+
+@each $i in $flex {
+    .d-#{$i}{
+        display: $i;
+    }
+    
+}
+
+// justify-content coding
+$justify: start, end, center, around, between, evenly;
+
+@each $i in $justify {
+    .justify-contet-#{$i}{
+        justify-content: $i;
+    }
+    
+}
+
+// align-items coding
+$align-items: start, end, center, stretch, baseline;
+
+@each $i in $align-items{
+    .align-items-#{$i}{
+        align-items: $i;
+    }
+    
+}

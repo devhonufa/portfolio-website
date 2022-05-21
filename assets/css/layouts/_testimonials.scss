@@ -1,0 +1,106 @@
+.testimonials-area{
+    background: $primary_color;
+    color: $white;
+    // slick  slider css item coding
+    .testimonials{
+                .slick-arrow {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: transparent;
+                    border: none;
+                    cursor: pointer;
+                    i{
+                            font-size: 25px;
+                            color: $white;
+                            background: none;
+                            padding: 6px;
+                            border-radius: 50%;
+                    }
+                }
+                .slick-prev {
+                       left: -150px;
+                    }
+                    .slick-next {
+                       right: -150px;
+    
+                    }
+
+                .slick-dots{
+                    position: absolute;
+                    left: 50%;transform: translateX(-50%);
+                    margin-top: 30px;
+                    li{
+                        display: inline-block;
+                        margin: 0 5px;
+                        &.slick-active{
+                            button{
+                                background: $black;
+                                color: $white;
+                            }
+
+                        }
+                        button{
+                            background: #ffff;
+                            border: 0;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
+                    }
+                }
+    // slick slider css item coding
+                
+
+    .singles-testimonial{
+            img{
+              border-radius: 50%;
+              margin: 0 auto;
+            }
+            p{
+                margin-top: 10px;
+            }
+            h4{
+                font-size: 20px;
+                text-transform: capitalize;
+                font-weight: 600;
+                margin-top: 10px;
+
+                span{
+                  display: block;
+                  font-size: 16px;
+                  text-transform: lowercase;
+                  font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px){
+     .testimonials-area{
+        .testimonials{
+            .slick-prev{
+            left: -80px;
+            }
+            .slick-next{
+            right: -80px;
+            }
+        }
+        
+    }
+}
+@media screen and (max-width: 480px){
+    .testimonials-area{
+        .testimonials{
+            .slick-prev{
+            left: -70px;
+            }
+            .slick-next{
+            right: -70px;
+            }
+        }
+        
+    }
+}

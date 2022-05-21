@@ -1,0 +1,94 @@
+@mixin a {
+    display: flex;  
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $link_color;
+    transition: 0.2s all;
+    &:hover{
+        color: $link_hover;
+
+    }
+    
+}
+@mixin btn-primary{
+    display: inline-block;
+            padding: 7px 20px;
+            border: 2px solid $btn_border;
+            border-radius: 25px;
+            margin: 10px 15px;
+            color: $btn_color;
+            font-weight: 600;
+            background: transparent;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            &:hover span{
+                width: 100%;
+            }
+            &:hover{
+                border: none;
+            }
+            span{
+                background: $btn_background;
+                width: 0;
+                height: 100%;
+                border-radius: 25px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+                transition: 0.5s;
+            }
+    
+}
+@mixin before{
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 2px;
+    background: $primary_color;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    
+}
+@mixin after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: $primary_color;
+    bottom: -4px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    
+}
+// h4 mixin coding
+@mixin h4 {
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 50px;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    
+}
+//  title coding
+@mixin title {
+        h4{
+            @include h4;
+            &:before{
+                @include before;
+
+            }
+            &:after{
+                @include after;
+            }
+
+        }
+
+    
+}

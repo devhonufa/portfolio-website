@@ -1,0 +1,78 @@
+/* background img css code*/
+.bg{
+    height: 130vh;
+    position: relative;
+    z-index: 2;
+    transition: 0.3s all;
+    width: 100%;
+    &:before{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: $black;
+         opacity: .85;
+         z-index: -1;
+    }
+
+    .banner-content{
+        h1{
+         font-size: 40px;
+         font-weight: 700;
+         color: $white;
+         line-height: 60px;
+        }
+        h4{
+            font-size: 20px;
+            color: $white;
+            line-height: 35px;
+
+
+        }
+      .btn-primary{
+            @include btn-primary;
+
+        }
+      .btn-border{
+            @include btn-border;
+
+        }
+
+       
+    }
+}
+
+// --------------------Mobile devices---------------------
+@media screen and (max-width: 992px){
+    .banner-area{
+        height: 70vh;
+        padding: 0;
+        
+    }
+}
+@media screen and (max-width: 769px){
+    .banner-area{
+        height: 90vh;
+        padding: 0;
+        .banner-content{
+            h1{
+                font-size: 50px;
+            }
+        }
+        
+    }
+}
+@media screen and (max-width: 480px){
+    .banner-area{
+        height: 75vh;
+        padding: 0;
+        .banner-content{
+            h1{
+                font-size: 40px;
+            }
+        }
+        
+    }
+}

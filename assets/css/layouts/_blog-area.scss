@@ -1,0 +1,106 @@
+.blog-area{
+    background: $background_color;
+    margin: 0 auto;
+    .single-blog{
+        background: $white;
+        
+        &:hover{
+            img{
+                transform: scale(1.2);
+            }
+        }
+        .blog-img{
+            position: relative;
+            overflow: hidden;
+            
+            img{
+                width: 100%;
+                transition: .5s;
+
+            }
+        }
+        .blog-meta{
+            background: $white;
+            width: 80%;
+            margin: 0 auto;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: -20px;
+            z-index: 2;
+            position: relative;
+            border-top: 2px solid $primary_color;
+            border-radius: 10px;
+           a{
+               font-size: 14px;
+               font-weight: 600;
+               color: $black;
+               
+
+               i{
+                   margin-right: 10px;
+                   font-size: 19px;
+                   color: $primary_color;
+                   padding: 0;
+
+               }
+           }
+        }
+
+        .blog-content{
+            padding: 20px;
+            border-radius: 5px;
+            border-bottom: 2px solid $primary_color;
+            h4{
+                font-size: 19px;
+
+        }
+        p{
+            margin: 10px 0;
+
+        }
+        .btn-primary{
+             z-index: 1;
+                @include btn-primary;
+                color: $black;  
+                margin: 10px 0 0 0;
+                &:hover{
+                    color: $white;
+                }
+            }
+
+        }
+        
+        
+         
+    }
+}
+
+// --------media queiry-------------------------
+
+
+
+@media screen and (max-width: 769px) {
+  .blog-area{
+      .col-xxl-4{
+          width: 50%;
+          margin: 10px 0;
+      }
+    
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .blog-area{
+      padding: 60px 0;
+      .row{
+        .col-xxl-4{
+          width: 100%;
+          margin: 20px 0;
+          }
+      }
+      
+  }
+}
+

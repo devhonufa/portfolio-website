@@ -1,0 +1,63 @@
+.cta-area{
+      height: 450px;
+    .ctb-content{
+        text-align: center;
+        margin: 0 auto;
+        color: $white;
+        i{
+            font-size: 60px;
+            color: $white;
+            margin-bottom: 16px;
+
+        }
+        h4{
+          font-size: 30px;
+          line-height: 50px;
+          font-weight: 700;
+        }
+        p{
+         
+            
+        }
+        .btn-border{
+            @include btn-border;
+            margin-top: 20px;
+            &:hover{
+                color: $white;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px){
+    .blog-area{
+        .col-xxl-4{
+            width: 50%;
+            margin: 10px 0;
+        }
+        .row{
+            justify-content: start;
+        }
+        .single-price{
+            padding: 30px 10px;
+        }
+    }
+}
+// --------------------Mobile devices--------------------
+@media screen and (max-width: 480px){
+    .cta-area{
+      height: 470px;
+      .col-xxl-8{
+          width: 100%;
+      }
+      .ctb-content{
+          i{
+              margin-bottom: 10px;
+          }
+          h4{
+              line-height: 40px;
+              padding-bottom: 10px;
+          }
+      }
+    }
+}

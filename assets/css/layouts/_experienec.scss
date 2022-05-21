@@ -1,0 +1,42 @@
+.counter-area{
+    background: $primary_color;
+    .single-counter{
+        i{
+            padding: 16px;
+            background: $background_color;
+            margin-bottom: 20px;
+            font-size: 25px;
+            color: $primary_color;
+            border-radius: 50%;
+        }
+        h4{
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 30px;
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+    }
+}
+
+// --------------------Tablets---------------------
+@media screen and (max-width: 769px){
+    .counter-area{
+        .col-xxl-3{
+            width: 50%;
+            margin-top: 30px;
+        }
+    }
+}
+// --------------------Mobile devices---------------------
+@media screen and (max-width: 480px){
+    .counter-area{
+        .col-xxl-3{
+            width: 50%;
+        }
+    }
+}
